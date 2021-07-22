@@ -1,0 +1,371 @@
+@font-face {
+  font-family:Number;
+  src: url(../FontNumber/PersianPageNumber-Bold.ttf);
+}
+//Color
+$fontColor: #336d00;
+$fontBgColor: #bbe48d;
+$fontMenu: #000;
+$BgMenu: #f3f3f3;
+$BgIphone: #ff6464;
+$ColorIphone: #9c2c2c;
+$fontTitleProduct:#666666;
+$BgHead:#d4d4d4c9;
+$fontHead:#000;
+$fontHoverDeveloper:#007acc;
+$fontHoverSanpp:#00db6e;
+//Display
+
+@mixin Display-Start {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+@mixin Display-End {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+@mixin Display-Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin Display-End-Center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@mixin Display-around {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+//Section Slider-Product
+section#Slider-Product {
+  width: 100%;
+  min-height: 1800px;
+  // border: 1px solid;
+
+  #Container {
+    width: 95%;
+    height: 100%;
+    // border: 1px solid red;
+    margin: 0px auto;
+
+    #row {
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+
+
+      //---------right bar Site
+      #R {
+        width: 70%;
+        height: 100%;
+        // border: 1px solid green;
+
+        //slider or Up
+        #Up {
+          width: 100%;
+          height: 300px;
+        //   border: 1px solid black;
+          margin-top: 20px;
+          position: relative;
+
+          #Slider {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+
+            #Img-One {
+              width: 100%;
+              height: 100%;
+              background-image: url(../Slider/1.jpg);
+              background-position: 0 -30px;
+              background-size: cover;
+              position: absolute;
+            }
+            #Img-Two {
+              width: 100%;
+              height: 100%;
+              background-image: url(../Slider/2.jpg);
+              background-position: 0 -70px;
+              background-size: cover;
+              position: absolute;
+            }
+            #Img-Three {
+              width: 100%;
+              height: 100%;
+              background-image: url(../Slider/3.jpg);
+              background-position: 0 -10px;
+              background-size: cover;
+              position: absolute;
+            }
+            #Img-Four {
+              width: 100%;
+              height: 100%;
+              background-image: url(../Slider/4.jpg);
+              background-position: 0 -130px;
+              background-size: cover;
+              position: absolute;
+            }
+          }
+          #AllCircle{
+              width: 200px;
+              height: auto;
+              display: flex;
+              position:relative;
+              z-index: 20;
+              top: 90%;
+              left: -40%;
+              background-color: #ffffffa6;
+              border-radius: 10px 10px 0 0;
+              @include Display-Center();
+
+
+            #Circle{
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #464646;
+                margin: 10px 15px;
+            }
+          }
+        }
+        //Down for Products
+        #Down{
+            width: 100%;
+            height:auto;
+            // border: 1px solid green;
+
+            //----------nav -bar -Down
+            #NavDown{
+                width:100%;
+                height: 100px;
+                // border: 1px solid red;
+                @include Display-around();
+
+                h2{
+                    padding: 0px 20px;
+                }
+                a{
+                    padding: 10px 20px;
+                    border:2px solid  $fontBgColor;
+                    color: $fontColor;
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                    transition: 1s;
+                    margin-left: 20px;
+
+                    &:hover{
+                        background-color: $fontBgColor;
+                        color: $BgMenu;
+                        border-radius: 5px;
+                    }
+                }
+                
+            }
+            //---------Product -Down
+            ul#Product{
+                width: 100%;
+                height: 100%;
+                @include Display-Center();
+                flex-wrap: wrap;
+
+                li{
+                    width: 250px;
+                    height: 350px;
+                    // border: 1px solid black;
+                    margin: 30px 15px;
+                    @include Display-Center();
+                    flex-direction: column;
+                    box-shadow: 3px 3px 10px gray;
+                    border-radius: 7px;
+                    cursor: pointer;
+                    transition: 1s;
+                    &:hover{
+                      margin-top: -10px;
+                    }
+
+                    #Photo-Title{
+                      width: 100%;
+                      height: 80%;
+                      // border: 1px solid red;
+                      @include Display-Center();
+                      flex-direction: column;
+                      img{
+                        width: 60%;
+                      }
+                      h5{
+                        color: $fontTitleProduct;
+                      }
+                    }
+                    #Price{
+                      width: 100%;
+                      height: 30%;
+                      // border: 1px solid blue;
+                      @include Display-around();
+
+                      p{
+                        color: $fontColor;
+                        font-family: Number;
+                        font-size: 1.2rem;
+                        padding-right: 10px;
+                      }
+                      i{
+                        width: 35px;
+                        height: 35px;
+                        border: 1px solid $fontBgColor;
+                        border-radius: 5px;
+                        @include Display-Center();
+                        color: $fontColor;
+                        margin-left: 10px;
+                        transition: 1s;
+                        box-shadow: 1px 1px 10px lightgray;
+                        &:hover{
+                          color: $BgMenu;
+                          background-color: $fontColor;
+                          box-shadow: 1px 1px 15px gray;
+                        }
+                      }
+                    }
+                }
+            }
+        }
+      }
+      //--------Left Bar Site
+      #L{
+        width: 30%;
+        height: auto;
+        // border: 1px solid blue;
+
+        #SideBar{
+          width: 100%;
+          height: 100%;
+          // border: 1px solid orange;
+
+
+          li{
+            width: 94%;
+           min-height: 550px;
+            border: 1px solid lightgray;
+            margin: 20px auto;
+       // --------------------header-SideBar
+            #head{
+              width: 100%;
+              height: 50px;
+              background-color: $BgHead;
+              color: $fontHead;
+              line-height: 3;
+              padding: 0px 10px;
+              font-weight: 900;
+            }
+            #lastSeen{
+              width:100%;
+              height: 80%;
+              // border: 1px solid red;
+              @include Display-Center();
+              flex-direction: column;
+
+              .CallOf,.Snap,.Developer,.tabcy{
+                width: 95%;
+                height: 70px;
+                border: 1px solid lightgray;
+                margin:15px 0px;
+                display: flex;
+
+               
+              }
+              .CallOf>#Title{
+                padding: 20px 10px;
+                cursor: pointer;
+
+                &:hover{
+                  color: $fontColor;
+                }
+              }
+              .Developer>#Title{
+                padding: 20px 10px;
+                cursor: pointer;
+
+                &:hover{
+                  color: $fontHoverDeveloper;
+                }
+              }
+              .Snap>#Title{
+                padding: 20px 10px;
+                cursor: pointer;
+
+                &:hover{
+                  color: $fontHoverSanpp;
+                }
+              }
+              .tabcy>#Title{
+                padding: 20px 10px;
+                cursor: pointer;
+
+                &:hover{
+                  color: $fontMenu;
+                }
+              }
+            }
+            #BtnShow{
+              width: 90%;
+              height: 50px;
+              margin: -7px auto;
+              border: 2px solid $fontHoverDeveloper;
+              color: $fontHoverDeveloper;
+              border-radius: 10px;
+              @include Display-Center();
+              transition: 1s;
+
+              &:hover{
+                background-color: $fontHoverDeveloper;
+                color: $BgMenu;
+                font-weight: 900;
+              }
+
+            }
+            #Brand{
+              width: 100%;
+              height: 100%;
+              @include Display-Center();
+              flex-direction: column;
+              #LinkBrand{
+                width: 100%;
+                height: auto;
+                // border: 1px solid red;
+                margin: 5px 0px;
+                @include Display-Center();
+                
+
+                img{
+                  width: 90%;
+                  height: auto;
+                  // margin: 30px 0px;
+                }
+              }
+            }
+            p{
+              padding: 10px 20px;
+            }
+            #Req{
+              flex-direction: column;
+              padding: 10px 20px;
+
+              .Choose{
+                margin-top: 10px;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

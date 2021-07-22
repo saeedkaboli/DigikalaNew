@@ -1,0 +1,127 @@
+
+::placeholder {
+    color: #09da6a;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #09da6a;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #09da6a;
+  }
+// --Color
+$font:gray;
+$fontRegister:#000;
+$fontRegisterHover:#fff;
+$BorderSearch:#aed581;
+//.
+//..
+
+//---------Display
+@mixin Display-Start {
+    display: flex;
+    justify-content:start;
+    align-items: center;
+}
+@mixin Display-End {
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+}
+
+
+// THIS Menu
+section#Menu{
+    width: 100%;
+    height: 200px;
+    // border: 1px solid black;
+
+    #Container{
+        width: 100%;
+        height: 130px;
+
+        #row{
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            #R,#L{
+                width: 50%;
+                height: 100%;
+                // border: 1px solid tomato;
+                @include Display-Start();
+
+                #Logo,#Title{
+                    // border: 1px solid green;
+                    margin-right: 30px;
+                    h3{
+                        color: $font;
+                        margin-top: 10px;
+                        text-align: left;
+                    }
+                }    
+        
+            }
+            #L{
+                display: block;
+                #Up,#Down{
+                    width: 100%;
+                    height: 50%;
+                    // border: 1px solid black;
+                    @include Display-End();
+                    a,input{
+                        margin-left: 50px;
+                        color: $fontRegister;
+                        font-weight: 900;
+                        padding: 10px;
+                    }
+                    a:hover{
+                     background-color: $fontRegister;
+                     color: $fontRegisterHover;
+                    
+                    }
+                  #Search{
+                      border: 2px solid $BorderSearch;
+                      width: auto;
+                      height:auto;
+                      margin-left: 50px;
+                      padding: 10px 0px;
+                      border-radius: 5px;
+                    input{
+                        width:60%;
+                        height: 100%;
+                        margin-top: 0px;
+                        border:none ;
+                        padding: 0px 10px;
+                        font-size: 0.9rem;
+
+                        &:focus{
+                            outline:none;
+                        }
+                        
+                    }
+                    button{
+                      
+                        border:none;
+                        background-color: none;
+                        margin-right: 35px;
+                        i{
+                            color: greenyellow;
+                            background-color:#fff;
+                            border: none;
+                            font-size: 1.2rem;
+                            cursor: pointer;
+                        }
+                    }
+                  }
+
+                }
+                
+            }
+        }
+    }
+}
+
+
