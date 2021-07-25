@@ -1,0 +1,534 @@
+@font-face {
+  font-family:Number;
+  src: url(../FontNumber/PersianPageNumber-Bold.ttf);
+}
+//Color
+$fontColor: #336d00;
+$fontBgColor: #bbe48d;
+$fontMenu: #000;
+$BgMenu: #f3f3f3;
+$BgIphone: #ff6464;
+$ColorIphone: #9c2c2c;
+$fontTitleProduct:#666666;
+$BgHead:#d4d4d4c9;
+$fontHead:#000;
+$fontHoverDeveloper:#007acc;
+$fontHoverSanpp:#00db6e;
+$BgComment:#ffffff;
+$ColorIcons:#979797;
+$BgBorderMessage:#9ccc65;
+$BgBorderMessageHover:#75974d;
+//Display
+
+@mixin Display-Start {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+@mixin Display-End {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+@mixin Display-Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin Display-End-Center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@mixin Display-around {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin  Display-Start-End {
+  display: flex;
+  justify-content: flex-start;
+  align-items:flex-end;
+
+}
+
+
+//Section Slider-Product
+section#Slider-Product {
+  width: 100%;
+  min-height: 2400px;
+  // border: 1px solid;
+
+  #Container {
+    width: 95%;
+    height: 100%;
+    // border: 1px solid red;
+    margin: 0px auto;
+
+    #row {
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+
+
+      //---------right bar Site
+      #R{
+        width: 75%;
+        height:auto;
+        // border: 1px solid green;
+    //------------------------------Slider or Post One
+      #PostOne{
+        width: 100%;
+        min-height: 900px;
+        margin: 20px 0px;
+        // border: 1px solid green;
+        box-shadow: 3px 3px 7px gray;
+
+        #Slider{
+          width: 90%;
+          height: 480px;
+          // border: 1px solid red;
+          background: url(../PhotoSliderNews/U.jpg);
+          background-position: center;
+          background-repeat:no-repeat;
+          margin: 20px auto;
+          // @include Display-Center();
+
+
+          
+        }
+        p{
+          @include Display-Center();
+          padding: 20px 40px;
+        }
+        #Comment{
+          margin: 10px auto;
+          width: 95%;
+          height: 130px;
+          // border: 1px solid black;
+          border-radius: 2px;
+          display: flex;
+          background-color: $BgComment;
+          box-shadow: 1px 1px 10px gray;
+
+          #CommentRight{
+            width: 20%;
+            height: 100%;
+            // border: 1px solid red;
+            @include Display-Center();
+             
+            img{
+            width:130px;
+            height: auto;
+            border-radius: 50%;    
+            
+            }
+          }
+          #CommentLeft{
+            width: 80%;
+            height: 100%;
+            // border: 1px solid black;
+            font-weight: 900;
+
+            h4{
+              padding: 10px 0px;
+            }
+            p{
+              font-size: 0.8rem;
+              padding: 10px 0px;
+              color: gray;
+              
+            }
+          }
+        }
+        #Icons{
+            width: 95%;
+            margin: 0 auto;
+            height: 50px;
+            // border: 1px solid red;
+            @include  Display-Start-End();
+
+            #Calender,#view,#Categury{
+              // border: 1px solid black;
+              width:auto;
+              height: 30px;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              font-size: 1.2rem;
+              color:$ColorIcons;
+
+              i,h6{
+                padding: 7px;
+              }
+             
+            }
+        } 
+
+
+
+      }
+      //-------------------------Other Post 
+      #PostNext{
+        width: 100%;
+        height: 1200px;
+        // border: 1px solid blue;
+
+        #Tag{
+          width: 100%;
+          height: auto;
+          // border: 1px solid black;
+          display: flex;
+           i,h6{
+             color: $ColorIcons;
+             padding: 0px 5px;
+           }
+        }
+        h3,h2{
+          width: 100%;
+          height: 100px;
+          // border: 1px solid red;
+          padding: 50px 0px;
+        }
+        #PostOther{
+          min-width: 100%;
+          height: 400px;
+          // border: 1px solid green;
+          @include  Display-around();
+
+          li{
+            max-width: 300px;
+            height: 380px;
+            // border: 1px solid orange;
+            // margin: 0px 20px;
+            box-shadow: 2px 2px 10px lightgrey;
+            @include Display-around();
+            flex-direction: column;
+            transition: 1s;
+            cursor: pointer;
+
+            &:hover{
+              margin-top: -10px;
+              box-shadow: 5px 5px 20px gray;
+            }
+             img{
+               width: 250px;
+               height: auto;
+              //  border: 1px solid blue;
+               margin: 10px 0px;
+             }
+             h5{
+               width: 100%;
+               height: auto;
+               padding: 0px 5px;
+               
+               a{
+                 color:#000;
+
+                 &:hover{
+                  color: $fontTitleProduct;
+                }
+               }
+             }
+             p{
+               font-size: 0.7rem;
+               padding: 20px;
+               font-weight: 900;
+               width: 100%;
+               height: auto;
+               font-family: sans-serif;
+               color: $fontTitleProduct;
+             }
+            
+          }
+        }
+        #Message{
+          margin: 0px auto;
+          width: 95%;
+          height: 300px;
+          // border: 1px solid blue;
+          margin-top: 25px;
+          display: flex;
+          box-shadow: 2px 2px 15px lightgray;
+
+          #txtArea{
+               width: 65%;
+               height: 100%;
+               @include Display-Center();
+              //  border: 1px solid red;
+
+               textarea{
+                 width: 90%;
+                 height: 90%;
+                 resize: none;
+                 border:5px solid $fontBgColor;
+                 padding: 20px 10px;
+                 border-radius: 10px;
+                 &:focus{
+                   outline:none;
+                 }
+               }
+          }
+          #Name-Email{
+            width: 35%;
+            height: 100%;
+            // border: 1px solid red;
+            @include Display-Start();
+            align-items: start;
+            flex-direction: column;
+
+            #name,#Email{
+            width: 100%;
+            height: auto;
+            // border: 1px solid red;
+            padding: 15px;
+            font-weight: 900;
+            }
+            #name-input,#Email-input{
+              width: 100%;
+              height: auto;
+              // border: 1px solid;
+              @include Display-Center();
+
+              input{
+                width: 90%;
+                height:50px;
+                border: 3px solid $fontBgColor;
+                padding: 0px 5px;
+                &:focus{
+                  outline: none;
+                }
+              }
+            }
+            #BtnMassage{
+              width: 100%;
+              height: auto;
+              @include Display-Center();
+
+              button{
+                width: 200px;
+                height: 50px;
+                margin: 20px 0px;
+                border: none;
+                color: $BgComment;
+                background-color: $fontBgColor;
+                border-radius: 7px;
+                cursor: pointer;
+
+                &:hover{
+                   background-color:$BgBorderMessageHover;
+                }
+              }
+            }
+
+          
+          }
+        }
+        #CommentAll{
+          width: 95%;
+          height: 400px;
+          // border: 1px solid red;
+          margin: 100px auto;
+
+          li{
+            width: 100%;
+            height: 150px;
+            // border: 1px solid green;
+            margin: 40px 0px;
+            box-shadow: 2px 2px 15px lightgray;
+            display: flex;
+
+            #RightCom{
+              width: 20%;
+              height:auto;
+              // border: 1px solid black;
+              @include Display-Center();
+
+              img{
+                width: 80%;
+                height: auto;
+              }
+
+            }
+            #LeftCom{
+              // border: 1px solid black;
+              width: 75%;
+              height: 100%;
+              @include Display-Center();
+              flex-direction: column;
+
+              h4{
+                width: 100%;
+                padding: 7px;
+              }
+              p{
+                padding: 10px;
+              }
+
+            }
+            #GoBack{
+            width: 7%;
+            height: 100%;
+            // border: 1px solid red;
+            display: flex;
+            justify-content: center;
+
+            i{
+              width: 50px;
+              height: 50px;
+              margin: 20px 0px;
+              color: $fontBgColor;
+              @include Display-Center();
+              transition: 1s;
+              cursor: pointer;
+              border-radius: 50%;
+
+              &:hover{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                color: $BgComment;
+                background-color: $BgBorderMessage;
+              }
+            }
+           
+            }
+          }
+
+        }
+
+      }
+      }
+      //--------Left Bar Site
+      #L{
+        width: 25%;
+        height: auto;
+        // border: 1px solid blue;
+
+        #SideBar{
+          width: 100%;
+          height: 100%;
+
+          // border: 1px solid orange;
+
+
+          li{
+            width: 94%;
+           min-height: 550px;
+            border: 1px solid lightgray;
+            margin: 20px auto;
+       // --------------------header-SideBar
+            #head{
+              width: 100%;
+              height: 50px;
+              background-color: $BgHead;
+              color: $fontHead;
+              line-height: 3;
+              padding: 0px 10px;
+              font-weight: 900;
+            }
+            #lastSeen{
+              width:100%;
+              height: 80%;
+              // border: 1px solid red;
+              @include Display-Center();
+              flex-direction: column;
+
+              .CallOf,.Snap,.Developer,.tabcy{
+                width: 95%;
+                height: 70px;
+                border: 1px solid lightgray;
+                margin:15px 0px;
+                display: flex;
+
+               
+              }
+              .CallOf>#Title{
+                padding: 20px 10px;
+                cursor: pointer;
+
+                &:hover{
+                  color: $fontColor;
+                }
+              }
+              .Developer>#Title{
+                padding: 20px 10px;
+                cursor: pointer;
+
+                &:hover{
+                  color: $fontHoverDeveloper;
+                }
+              }
+              .Snap>#Title{
+                padding: 20px 10px;
+                cursor: pointer;
+
+                &:hover{
+                  color: $fontHoverSanpp;
+                }
+              }
+              .tabcy>#Title{
+                padding: 20px 10px;
+                cursor: pointer;
+
+                &:hover{
+                  color: $fontMenu;
+                }
+              }
+            }
+            #BtnShow{
+              width: 90%;
+              height: 50px;
+              margin: -7px auto;
+              border: 2px solid $fontHoverDeveloper;
+              color: $fontHoverDeveloper;
+              border-radius: 10px;
+              @include Display-Center();
+              transition: 1s;
+
+              &:hover{
+                background-color: $fontHoverDeveloper;
+                color: $BgMenu;
+                font-weight: 900;
+              }
+
+            }
+            #Brand{
+              width: 100%;
+              height: 100%;
+              @include Display-Center();
+              flex-direction: column;
+              #LinkBrand{
+                width: 100%;
+                height: auto;
+                // border: 1px solid red;
+                margin: 5px 0px;
+                @include Display-Center();
+                
+
+                img{
+                  width: 90%;
+                  height: auto;
+                  // margin: 30px 0px;
+                }
+              }
+            }
+            p{
+              padding: 10px 20px;
+            }
+            #Req{
+              flex-direction: column;
+              padding: 10px 20px;
+
+              .Choose{
+                margin-top: 10px;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+//color
+
+//Display
+
+//this is aboutFooter
+
+#aboutFooter{
+    width: 100%;
+    height: 50px;
+    // border: 1px solid red;
+
+    #Container{
+        width: 85%;
+        height: 100%;
+        margin: 0 auto;
+        // border: 1px solid green;
+
+        #row{
+            width: 100%;
+            height: 100%;
+
+            #R{
+                width: 50%;
+                height: 100%;
+                // border: 1px solid blue;
+
+                #MenuFooter{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+
+                    li{
+                        padding: 0px 10px;
+
+                        a{
+                            color:gray;
+                            font-size: 0.8rem;
+                        }
+                    }
+                
+                }
+            }
+        }
+    }
+}

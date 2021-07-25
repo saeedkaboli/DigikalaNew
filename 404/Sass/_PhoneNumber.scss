@@ -1,0 +1,67 @@
+
+//---Color
+$font:gray;
+$fontTelegram:#2a8ad8;
+$fontInstgram:#f65d37;
+$fontNumberHover:#000;
+
+//-----display
+
+//NON
+
+//-----------------------------------
+section#Number{
+    width: 100%;
+    height: 30px;
+    // border: 1px solid black;
+    font-family: Ico;
+
+    #Container{
+        width:80%;
+        height:auto;
+        // border: 1px solid red;
+        margin:0px auto;
+
+
+        #row{
+            width: 100%;
+            height: 100%;
+            // border: 1px solid green;
+            display: flex;
+            align-items: center;
+            //This is Right and Left
+
+            #R,#L{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                padding-top: 5px;
+                // border: 1px solid tomato
+                h5{
+                    color:$font;
+                    cursor: pointer;
+                    &:hover{
+                        color: $fontNumberHover;
+                    }
+                }
+            }
+            #L{
+                display: flex;
+                justify-content: flex-end;
+
+                i{
+                   font-size: 1.4rem;
+                   margin: 0 10px;
+                   cursor: pointer;
+                }
+                #tele:hover{
+                      color: $fontTelegram;
+                }
+                #ins:hover{
+                    color:$fontInstgram;
+                }
+
+            }
+        }
+    }
+}

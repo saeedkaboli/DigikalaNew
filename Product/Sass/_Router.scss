@@ -1,0 +1,68 @@
+//color
+$BgRout: #e0e0e0;
+$ColorRout:#808080;
+
+
+//Display
+@mixin Display-column {
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    flex-direction: column;
+}
+
+
+
+//this is Router
+section#Router{
+    width: 100%;
+    height: 100px;
+    background-color:$BgRout;
+
+    #Container{
+        width: 93%;
+        height: 100%;
+        margin: 0 auto;
+        // border: 1px solid red;
+
+        #row{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            // border: 1px solid red;
+             
+            #L,#R{
+                width: 50%;
+                height: 100%;
+                // border: 1px solid green;
+
+                h5{
+                    color:$ColorRout ;
+                    margin: 15px 0px;
+                }
+            }
+            #L{
+                display: flex;
+                justify-content:flex-end;
+                align-items: flex-end;
+                flex-direction: column;
+                padding: 5px 0px;
+
+                #AllStar{
+                    display: flex;
+                    
+
+                    i{
+                        font-size: 2rem 
+                    }
+                    #Star-five,#Star-four,#Star-three,#Star-two{
+                      color: rgb(251, 178, 61);
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}

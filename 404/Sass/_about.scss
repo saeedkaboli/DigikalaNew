@@ -1,0 +1,50 @@
+//color
+$Bgabout:#f1f1f1;
+$fontColor:#999999;
+
+
+
+//Display
+
+
+
+//this is Section about
+section#about{
+    width: 100%;
+    height: 70px;
+    background-color: $Bgabout;
+    border-bottom: 1px solid black;
+
+    #Container{
+        width: 93%;
+        height: 100%;
+        // border: 1px solid red;
+        margin: 0 auto;
+
+        #row{
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            #R,#L{
+                width: 50%;
+                height: 100%;
+                // border: 1px solid red;
+                display: flex;
+                align-items: center;
+                color: $fontColor;
+                font-size: 0.8rem;
+            }
+            #L{
+                justify-content: flex-end;
+
+                h4{
+                    padding: 0px 10px;
+                }
+                i{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}

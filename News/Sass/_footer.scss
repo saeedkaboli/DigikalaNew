@@ -1,0 +1,197 @@
+//---------------------------Start ChangeColor PlaceHolder
+::placeholder {
+    color: gray;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: gray;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: gray;
+  }
+  //---------------------------Finish ChangeColor PlaceHolder
+//--------------------------color
+$CircleColor:#00c753;
+$BgColor:#8bc34a;
+$BgAppleBtn:#4b4b4bbe;
+$BgAppleBtnHover:#2c2c2cbe;
+$BgAndroid:$BgColor;
+$BgAndroidHover:#638b35;
+$ColorDefultBtns:#fff;
+//-------------------------Finish--Color
+
+//---------------------------Display
+@mixin Display-Center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @mixin Display-End {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  @mixin Display-Between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @mixin Display-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+//------------------------Finsh---Display
+
+//this is Footer
+footer{
+    width: 100%;
+    height: 400px;
+    // border: 1px solid red;
+
+    #Container{
+        width: 95%;
+        height: 100%;
+        // border: 1px solid green;
+        margin: 0 auto;
+
+        #row{
+            width: 100%;
+            height: 100%;
+            // border: 1px solid red;
+            display: flex;
+            #R,#L{
+                width: 50%;
+                height: 100%;
+                // border: 2px solid green;
+                display: flex;        
+
+                    #footer-Product,#footer-News{
+                        width: 50%;
+                        height: 100%;
+                        // border: 1px solid blue;
+                        @include Display-Center();
+                        flex-direction: column;
+                        justify-content:space-around;
+                        align-items: flex-start;
+                        padding-right: 20px;
+                        li{
+                            list-style:circle;
+                            cursor: pointer;
+                            transition: 1s;
+                            font-size: 1.5rem;
+                            
+                            &:hover{
+                                color: $CircleColor;
+                                font-size: 2rem;
+                                font-weight: 900;
+                                list-style:disc;
+                            }
+                            a{
+                                color: #000;
+                                font-weight: 900;
+                                font-size: 0.8rem;
+                            }
+                            
+                        }
+                    }
+
+            }
+            #L{
+                // @include Display-Center();
+                flex-direction: column;
+
+                h3{
+                    padding: 15px 20px;
+                }
+                p{
+                    padding: 10px 20px;
+                    
+                }
+                #Search{
+                    width: 100%;
+                    height: 70px;
+                    padding: 20px 0px;
+        
+                    #SearchBox{
+                        width: 450px;
+                        height: 50px;
+                        border: 3px solid $BgColor;
+                         margin-right: 130px;
+                         border-radius: 7px;
+                         @include Display-Between();
+    
+                        button{
+                            width: 100px;
+                            height: 80%;
+                            border: none;
+                            background-color:$BgColor;
+                            border-radius: 5px;
+                            color: $ColorDefultBtns;
+                            margin-right: 5px;
+                            cursor: pointer;
+
+                            &:hover{
+                                background-color: $BgAndroidHover;
+                            }
+                        }
+                        input{
+                            width: 280px;
+                            height: 100%;
+                            padding-left: 15px;
+                            direction: ltr;
+                            border:none;
+                            font-size: 1.2rem;
+
+
+                            &:focus{
+                                outline: none;
+                            }
+
+                        }
+                    }
+                }
+                h5{
+                    padding: 15px 20px;
+                }
+                #Download{
+                    width: 100%;
+                    height: 100px;
+                    // border: 1px solid red;
+                    @include Display-around();
+
+                    a{
+                     padding: 5px 10px;
+                     @include Display-around();
+                     color: #000;
+                     background-color: $BgColor;
+                     color: $ColorDefultBtns;
+                     border-radius: 5px;
+                  
+
+                     i{
+                         font-size: 1.3rem;
+                     }
+
+                    }
+                    #Apple{
+                        background-color:$BgAppleBtn;
+                        &:hover{
+                            background-color: $BgAppleBtnHover;
+                        }
+                    }
+                    #Android{
+                        background-color: $BgAndroid;
+
+                        &:hover{
+                            background-color: $BgAndroidHover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
