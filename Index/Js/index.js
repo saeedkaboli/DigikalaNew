@@ -2,42 +2,56 @@ var El={
     Slider:document.getElementById("Slider"),
     ImgOne:document.getElementById("Img-One"),
     ImgTwo:document.getElementById("Img-Two"),
-    ImgThree:document.getElementById("ImgThree"),
+    ImgThree:document.getElementById("Img-Three"),
     ImgFour:document.getElementById("Img-Four"),
-    body:document.querySelector("body"),
-    x:0
+    body:document.querySelector("body")
 }
 
 //Envet
 // El.body.addEventListener("load",slide);
 
 
-
+var x=0;
 //function
 function slide(){
 setInterval(() => {
-    if(El.x==0){
-        El.ImgTwo.style.opacity=0;
-        El.ImgOne.style.opacity="1";
-        var t=(El.x)+1;
-        return t;
-    }
-    else if(El.x==1){
+    if(x==0){
+      El.ImgFour.style.opacity=0;
+      El.ImgThree.style.opacity=0;
+      El.ImgTwo.style.opacity=0;
+       El.ImgOne.style.opacity=1;
        
-        El.ImgOne.style.opacity=0;
-        El.ImgTwo.style.opacity="1";
-        t++
-        console.log(s);
-        console.log(t);
-        return t;
+        return x++;
     }
-    else if(El.x==2){
+    else if(x==1){
+        El.ImgOne.style.opacity=0;
+        El.ImgFour.style.opacity=0;
+        El.ImgThree.style.opacity=0;
+        El.ImgTwo.style.opacity=1;
+         
+        
+        
+        return x++;
+    }
+    else if(x==2){
         El.ImgTwo.style.opacity=0;
-        El.ImgThree.style.opacity="1";
-        t++
-        return t;
+        El.ImgOne.style.opacity=0;
+        El.ImgFour.style.opacity=0;
+        El.ImgThree.style.opacity=1;
+        
+        return x++;
         
     }
-},2000);
+    else if(x==3){
+        El.ImgThree.style.opacity=0;
+        El.ImgTwo.style.opacity=0;
+        El.ImgOne.style.opacity=0;
+        El.ImgFour.style.opacity=1;
+        
+        x=0
+        return x;
+        
+    }
+},3000);
 
 }
